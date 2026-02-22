@@ -1,0 +1,157 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+  --bg-main: #f8fafc;
+  --bg-card: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border-light: #e5e7eb;
+  --accent: #6366f1;
+}
+
+/* BODY */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.75;
+}
+
+/* HEADER */
+header {
+  max-width: 960px;
+  margin: auto;
+  text-align: center;
+  padding: 4rem 1.5rem 2rem;
+}
+
+header h1 {
+  font-size: 2.6rem;
+}
+
+header p {
+  color: var(--text-muted);
+  margin-top: .5rem;
+}
+
+/* NAV */
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.8rem;
+  list-style: none;
+  margin-top: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* SECTIONS */
+section {
+  max-width: 880px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+}
+
+/* CARD */
+.collapsible {
+  background: var(--bg-card);
+  border-radius: 18px;
+  padding: 3rem;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 10px 30px rgba(0,0,0,.04);
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(180deg,#fff,#f8fafc);
+}
+
+.center {
+  text-align: center;
+}
+
+/* HEADER SECTION */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: .8rem;
+}
+
+.toggle-icon {
+  transition: transform .25s ease;
+}
+
+/* CONTENT */
+.section-content {
+  margin-top: 2rem;
+}
+
+.collapsible:not(.open) .section-content {
+  display: none;
+}
+
+.collapsible:not(.open) .toggle-icon {
+  transform: rotate(-90deg);
+}
+
+/* AUTHOR CARD */
+.author-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.author-card img {
+  width: 90px;
+  border-radius: 50%;
+}
+
+/* IMAGES */
+.intro-logo {
+  width: 110px;
+  margin-bottom: 1.5rem;
+  opacity: .9;
+}
+
+.section-image {
+  margin-top: 2rem;
+  width: 100%;
+  border-radius: 14px;
+}
+
+/* TEXT */
+.lead {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+/* LIST */
+.data-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.data-list li {
+  margin-bottom: .6rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .author-card {
+    flex-direction: column;
+  }
+}
