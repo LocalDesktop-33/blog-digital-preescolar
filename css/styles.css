@@ -24,31 +24,80 @@ body {
 }
 
 /* HEADER */
-header {
+.site-header {
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #f9fafb 100%
+  );
+  border-bottom: 1px solid var(--border-light);
+}
+
+.header-inner {
   max-width: 960px;
-  margin: auto;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 2rem;
   text-align: center;
-  padding: 4rem 1.5rem 2rem;
 }
 
-header h1 {
+.site-header h1 {
   font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
-header p {
+.subtitle {
+  margin-top: 0.6rem;
   color: var(--text-muted);
-  margin-top: .5rem;
 }
 
 /* NAV */
-nav ul {
+.main-nav {
+  margin-top: 2.5rem;
+}
+
+.main-nav ul {
   display: flex;
   justify-content: center;
-  gap: 1.8rem;
+  gap: 1.25rem;
   list-style: none;
-  margin-top: 2rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--border-light);
+  padding: 0.6rem;
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 999px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  position: relative;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: all 0.25s ease;
+}
+
+/* Hover elegante */
+.main-nav a:hover {
+  color: var(--accent);
+  background-color: rgba(99,102,241,0.08);
+}
+
+/* Link activo */
+.main-nav a.active {
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .main-nav ul {
+    border-radius: 16px;
+    gap: 0.5rem;
+  }
 }
 
 /* SECTIONS */
@@ -109,7 +158,9 @@ section {
   align-items: center;
   justify-content: center;
   margin: 2rem 0;
+
 }
+
 
 .author-card img {
   width: 90px;
@@ -137,6 +188,11 @@ section {
 
 .muted {
   color: var(--text-muted);
+  text-align: left;
+}
+.list{
+    list-style: disc;
+    padding-left: 1.5rem;
 }
 
 /* LIST */
